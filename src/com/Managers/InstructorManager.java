@@ -13,42 +13,42 @@ public  class InstructorManager extends BaseManager implements IEntityRepository
     @Override
     public void add(Instructor instructor, BaseLogger logger) {
 
-        add(instructor,logger);
+        super.add(instructor,logger);
     }
 
     @Override
     public void delete(Instructor instructor, BaseLogger logger) {
 
-        delete(instructor,logger);
+        super.delete(instructor,logger);
     }
 
     @Override
     public void update(Instructor instructor, BaseLogger logger) {
 
-        update(instructor,logger);
+        super.update(instructor,logger);
     }
 
     @Override
-    public ArrayList<Instructor> getAll(Instructor instructor, BaseLogger logger) {
+    public ArrayList<Instructor> getAll( BaseLogger logger) {
 
-       return getAll(instructor,logger);
+       return super.getAll(new Instructor(),logger);
     }
 
     @Override
     public void addMultiple(Instructor[] t, BaseLogger logger) {
 
-        addMultiple(t,logger);
+        super.addMultiple(t,logger);
     }
 
     @Override
     public void deleteMultiple(Instructor[] t, BaseLogger logger) {
 
-        deleteMultiple(t,logger);
+        super.deleteMultiple(t,logger);
     }
 
     @Override
     public void updateMultiple(Instructor[] t, BaseLogger logger) {
 
-        updateMultiple(t,logger);
+        super.updateMultiple(t,logger);
     }
 }

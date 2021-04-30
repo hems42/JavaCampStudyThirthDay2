@@ -35,18 +35,19 @@ public abstract class BaseManager {
         insideLog(logger);
     }
 
-    ArrayList<Person> getAll(Person person, @Nullable BaseLogger logger)
+    ArrayList getAll(Person person, @Nullable BaseLogger logger)
     {
-        ArrayList<Person> people = null;
-        int i=0;
-        while(i<40)
+        ArrayList people = new ArrayList();
+
+        for(int i=0;i<5;i++)
         {
+
             people.add(person);
-            i++;
+
         }
         //........
 
-        System.out.println("Tüm "+person.getDescreption() + " kayıtları başarıyla getirilmiştir.");
+        System.out.println("Tüm "+person.getDescreption() + " kayıtları başarıyla getirilmiştir,\ngetirilen kayıt sayısı :"+people.size());
         insideLog(logger);
 
         return people;

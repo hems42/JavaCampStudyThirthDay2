@@ -12,43 +12,43 @@ public class StudentManager extends BaseManager implements IEntityRepository<Stu
     @Override
     public void add(Student student, BaseLogger logger) {
 
-        add(student,logger);
+        super.add(student,logger);
     }
 
     @Override
     public void delete(Student student, BaseLogger logger) {
 
-        delete(student,logger);
+        super.delete(student,logger);
     }
 
     @Override
     public void update(Student student, BaseLogger logger) {
 
-        update(student,logger);
+        super.update(student,logger);
     }
 
     @Override
-    public ArrayList<Student> getAll(Student student, BaseLogger logger) {
+    public ArrayList<Student> getAll( BaseLogger logger) {
 
-       return getAll(student,logger);
+       return super.getAll(new Student(),logger);
     }
 
     @Override
     public void addMultiple(Student[] t, BaseLogger logger) {
 
-       addMultiple(t,logger);
+        super.addMultiple(t,logger);
 
     }
 
     @Override
     public void deleteMultiple(Student[] t, BaseLogger logger) {
 
-        deleteMultiple(t,logger);
+        super.deleteMultiple(t,logger);
     }
 
     @Override
     public void updateMultiple(Student[] t, BaseLogger logger) {
 
-        updateMultiple(t,logger);
+        super.updateMultiple(t,logger);
     }
 }

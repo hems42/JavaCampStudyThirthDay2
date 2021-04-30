@@ -2,6 +2,7 @@ package com.Managers;
 
 import com.IEntityRepository;
 import com.Logs.BaseLogger;
+import com.People.Person;
 import com.People.Student;
 import com.People.User;
 
@@ -13,43 +14,44 @@ public class UserManager extends BaseManager implements IEntityRepository<User> 
     @Override
     public void add(User user, BaseLogger logger) {
 
-       add(user,logger);
+       super.add(user,logger);
     }
 
     @Override
     public void delete(User user, BaseLogger logger) {
 
-      delete(user,logger);
+      super.delete(user,logger);
     }
 
     @Override
     public void update(User user, BaseLogger logger) {
 
-       update(user,logger);
+       super.update(user,logger);
     }
 
     @Override
-    public ArrayList<User> getAll(User user, BaseLogger logger) {
+    public ArrayList<User> getAll(BaseLogger logger) {
 
-       return getAll(user,logger);
+
+        return  super.getAll(new User(),logger);
     }
 
     @Override
     public void addMultiple(User[] t, BaseLogger logger) {
 
-        addMultiple(t,logger);
+        super.addMultiple(t,logger);
 
     }
 
     @Override
     public void deleteMultiple(User[] t, BaseLogger logger) {
 
-       deleteMultiple(t, logger);
+        super.deleteMultiple(t, logger);
     }
 
     @Override
     public void updateMultiple(User[] t, BaseLogger logger) {
 
-       updateMultiple(t,logger);
+        super.updateMultiple(t,logger);
     }
 }

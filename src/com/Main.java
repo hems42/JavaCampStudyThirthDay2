@@ -2,15 +2,16 @@ package com;
 
 
 import com.Logs.DatabaseLogger;
+import com.Logs.EmailLogger;
 import com.Managers.InstructorManager;
 import com.Managers.UserManager;
 import com.People.Instructor;
 import com.People.Student;
+import com.People.User;
 
 public class Main {
 
     public static void main(String[] args) {
-
 
 
         // This work is different from the other because
@@ -44,6 +45,8 @@ public class Main {
         instructor.setEducationState("Universty");
         instructor.setNationalIdentityNumber("00000000001");
         instructor.setStudents(students);
+
+
 
 
 
@@ -100,6 +103,7 @@ public class Main {
         // * deleting instructor by multiple method with out Logging
 
         instructorManager.deleteMultiple(instructors,null);
+
 
     }
 }

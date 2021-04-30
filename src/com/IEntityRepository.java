@@ -12,7 +12,7 @@ public interface IEntityRepository <T extends IEntity>{
      void  add(T t, @Nullable BaseLogger logger);
      void  delete(T t, @Nullable BaseLogger logger);
      void  update(T t, @Nullable BaseLogger logger);
-    ArrayList<T> getAll(T t, @Nullable BaseLogger logger);
+    ArrayList<T> getAll(@Nullable BaseLogger logger);
 
 
 
