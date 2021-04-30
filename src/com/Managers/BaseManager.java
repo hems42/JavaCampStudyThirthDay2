@@ -1,8 +1,8 @@
 package com.Managers;
 
 
-import com.company.Logs.BaseLogger;
-import com.company.People.Person;
+import com.Logs.BaseLogger;
+import com.People.Person;
 import com.sun.istack.internal.Nullable;
 
 import java.util.ArrayList;
@@ -11,26 +11,31 @@ public abstract class BaseManager {
 
 
 
+
+    // all Of Those are base methods for repository...
+
+
+
     // singular methods
-   public  void  add(Person person, @Nullable BaseLogger logger)
+     void  add(Person person, @Nullable BaseLogger logger)
     {
         System.out.println(person.toString() + " Başarıyla eklendi");
-       insideLog(logger);
+        insideLog(logger);
     }
 
-   public void delete(Person person, @Nullable BaseLogger logger)
+    void delete(Person person, @Nullable BaseLogger logger)
     {
         System.out.println(person.toString() + " Başarıyla silindi");
         insideLog(logger);
     }
 
-   public void update(Person person, @Nullable BaseLogger logger)
+    void update(Person person, @Nullable BaseLogger logger)
     {
         System.out.println(person.toString() + " Başarıyla güncellendi");
         insideLog(logger);
     }
 
-    public  ArrayList<Person> getAll(Person person,@Nullable BaseLogger logger)
+    ArrayList<Person> getAll(Person person, @Nullable BaseLogger logger)
     {
         ArrayList<Person> people = null;
         int i=0;
@@ -51,7 +56,7 @@ public abstract class BaseManager {
 
     // multiple methods
 
-   public void addMultiple(Person [] people,@Nullable BaseLogger logger)
+    void addMultiple(Person [] people,@Nullable BaseLogger logger)
     {
         for(Person person:people)
         {
@@ -61,7 +66,7 @@ public abstract class BaseManager {
         System.out.println("Toplu iş dosyası başarıyla eklendi");
     }
 
-   public void deleteMultiple(Person [] people,@Nullable BaseLogger logger)
+    void deleteMultiple(Person [] people,@Nullable BaseLogger logger)
     {
         for(Person person:people)
         {
@@ -72,7 +77,7 @@ public abstract class BaseManager {
     }
 
 
-   public void updateMultiple(Person [] people,@Nullable BaseLogger logger)
+    void updateMultiple(Person [] people,@Nullable BaseLogger logger)
     {
         for(Person person:people)
         {
@@ -92,7 +97,8 @@ public abstract class BaseManager {
 
 
 
-    private void insideLog(BaseLogger logger)
+
+    void insideLog(BaseLogger logger)
     {
         if(logger!=null)
         {

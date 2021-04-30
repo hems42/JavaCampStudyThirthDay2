@@ -1,7 +1,10 @@
 package com.People;
 
 
-public abstract class Person {
+import com.IEntity;
+import com.IEntityRepository;
+
+public abstract class Person implements IEntity {
 
     int id;
     String name;

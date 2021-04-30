@@ -1,13 +1,24 @@
 package com;
 
-import com.company.Logs.DatabaseLogger;
-import com.company.Managers.InstructorManager;
-import com.company.People.Instructor;
-import com.company.People.Student;
+
+import com.Logs.DatabaseLogger;
+import com.Managers.InstructorManager;
+import com.Managers.UserManager;
+import com.People.Instructor;
+import com.People.Student;
 
 public class Main {
 
     public static void main(String[] args) {
+
+
+
+        // This work is different from the other because
+        // I used repository here so that the manager classes
+        // do not use a variable other than their
+
+
+        // for example usermanager class can t use an instructor class as a variable...
 
 
         InstructorManager instructorManager= new InstructorManager();
@@ -59,7 +70,7 @@ public class Main {
 
 
 
-        Instructor [] instructors=new Instructor[50];
+        Instructor[] instructors=new Instructor[50];
 
 
         for(int i=0;i<50;i++)
